@@ -1,0 +1,5 @@
+@use 'variables';
+
+@function rem($px) {
+  @return calc($px / variables.$font-size) + rem;
+}

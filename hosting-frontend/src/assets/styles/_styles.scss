@@ -1,0 +1,68 @@
+@use 'variables';
+@use 'functions';
+
+:root {
+  --sidebar-width: 300px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  height: functions.rem(4px);
+  width: functions.rem(4px);
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color--hex);
+  border-radius: functions.rem(8px);
+  border: functions.rem(2px) solid transparent;
+}
+
+html {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: variables.$font-size;
+}
+
+body {
+  background-color: var(--background-color--hex);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+p,
+span,
+input,
+button,
+a,
+i {
+  font-size: var(--font-size-default-text);
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+input,
+button,
+a {
+  color: var(--text-color--hex);
+}

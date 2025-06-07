@@ -1,0 +1,1 @@
+export { default as CurrentHosting } from "./components/CurrentHosting.vue"

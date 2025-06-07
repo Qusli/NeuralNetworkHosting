@@ -1,0 +1,1 @@
+export type { CreateHostingDto } from "./create-hosting.dto"
