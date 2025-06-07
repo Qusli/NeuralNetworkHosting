@@ -1,0 +1,93 @@
+:root {
+  --font-size-h1: clamp(28px, 2.5vw, 32px);
+  --font-size-h2: clamp(24px, 2.5vw, 28px);
+  --font-size-h3: clamp(20px, 2.5vw, 24px);
+  --font-size-large-text: clamp(16px, 2.5vw, 18px);
+  --font-size-default-text: clamp(14px, 2.5vw, 16px);
+  --font-size-medium-text: clamp(12px, 2.5vw, 14px);
+  --font-size-small-text: clamp(10px, 2.5vw, 12px);
+}
+
+/* BLACK */
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('@/assets/fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Roboto-Black--italic';
+  src: url('@/assets/fonts/Roboto-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+}
+/* END BLACK */
+
+/* BOLD */
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('@/assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold--italic';
+  src: url('@/assets/fonts/Roboto-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+}
+/* END BLACK */
+
+/* MEDIUM */
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('@/assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium--italic';
+  src: url('@/assets/fonts/Roboto-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+}
+/* END MEDIUM */
+
+/* REGULAR */
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('@/assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular--italic';
+  src: url('@/assets/fonts/Roboto-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+}
+/* END REGULAR */
+
+/* LIGHT */
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('@/assets/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto-Light--italic';
+  src: url('@/assets/fonts/Roboto-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+}
+/* END LIGHT */
+
+/* THIN */
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('@/assets/fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Roboto-Light--italic';
+  src: url('@/assets/fonts/Roboto-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+}
+/* END THIN */

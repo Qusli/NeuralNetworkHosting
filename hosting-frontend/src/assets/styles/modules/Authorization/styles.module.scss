@@ -1,0 +1,28 @@
+@use '@/assets/styles/functions';
+
+.or {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: functions.rem(8px);
+
+  &::after,
+  &::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 100%;
+    height: functions.rem(2px);
+
+    position: relative;
+    top: functions.rem(2px);
+
+    background-color: var(--border-color--hex);
+  }
+
+  .orText {
+    color: rgba(var(--text-color--rgb), 0.6);
+  }
+}

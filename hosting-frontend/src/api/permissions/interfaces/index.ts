@@ -1,0 +1,1 @@
+export type { IPermission } from "./permisson.interface"

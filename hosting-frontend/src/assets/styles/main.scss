@@ -1,0 +1,13 @@
+@use './functions';
+
+.flex {
+  display: flex;
+}
+
+.gap-4 {
+  gap: functions.rem(4px);
+}
+
+.gap-8 {
+  gap: functions.rem(8px);
+}

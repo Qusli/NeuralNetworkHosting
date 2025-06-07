@@ -1,0 +1,1 @@
+export type { IHosting } from "./hosting.interface"

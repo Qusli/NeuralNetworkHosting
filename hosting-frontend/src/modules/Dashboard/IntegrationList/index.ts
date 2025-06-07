@@ -1,0 +1,1 @@
+export { default as IntegrationList } from "./components/IntegrationList.vue"

@@ -1,0 +1,1 @@
+export { default as HostingList } from "./components/HostingList.vue"
