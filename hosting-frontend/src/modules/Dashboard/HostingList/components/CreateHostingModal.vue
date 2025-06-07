@@ -26,7 +26,7 @@ const hostingsStore = useHostingsStore()
 
     <template #buttons>
       <div :class="$s.buttonWrapper">
-        <UIButton type="primary" label="Создать" @click="hostingsStore.create" />
+        <UIButton type="primary" label="Создать" :loading="hostingsStore.isLoading" @click="hostingsStore.create({ redirectToNewHosting: true, notifyError: true })" />
       </div>
     </template>
   </UIModal>

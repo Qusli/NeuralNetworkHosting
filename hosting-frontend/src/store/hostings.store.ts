@@ -6,6 +6,9 @@ import {
 import { defineStore } from 'pinia'
 
 import { useWorkplacesStore } from '@/store/workplaces.store'
+import { ROUTES } from '@/constants'
+import { NotifyErrorResponse } from '@/classes'
+import type { IErrorResponse } from '@/types'
 
 interface State {
   hostings: {
@@ -16,6 +19,11 @@ interface State {
     create: CreateHostingDto
   }
   isLoading: boolean
+}
+
+interface CreateOptions {
+  notifyError: boolean
+  redirectToNewHosting: boolean
 }
 
 const getEmptyCreateDto = (): CreateHostingDto => ({
@@ -153,13 +161,27 @@ export const useHostingsStore = defineStore('hostings-store', {
       this.isLoading = false
     },
 
-    async create() {
+    async create(options?: Partial<CreateOptions>) {
       this.isLoading = true
 
-      const [hosting] = await HostingsApi.create(this.dto.create)
+      const [hosting, error] = await HostingsApi.create(this.dto.create)
+
+      if (error && options?.notifyError) {
+        NotifyErrorResponse.init(error?.response?.data as IErrorResponse).sendNotifyError()
+        this.isLoading = false
+        return;
+      }
 
       if (hosting) {
         this.hostings.items.push(hosting)
+      }
+
+      if (hosting && options?.redirectToNewHosting) {
+        this.hostings.current = hosting
+        await this.$router.push({ name: ROUTES.DASHBOARD.HOSTING.NAME, query: {
+            hostingId: hosting.id
+          }
+        })
       }
 
       this.isLoading = false

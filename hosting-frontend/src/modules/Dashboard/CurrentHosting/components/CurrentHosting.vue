@@ -64,7 +64,7 @@ onUnmounted(() => {
         </Tabs>
 
         <TabContent v-model:current-tab="currentTab">
-          <TabContentItem name="containers"> Контейнеры </TabContentItem>
+          <TabContentItem name="containers"> В разработке... </TabContentItem>
           <TabContentItem name="analytics"> Аналитика </TabContentItem>
           <TabContentItem name="settings"> Настройки </TabContentItem>
         </TabContent>

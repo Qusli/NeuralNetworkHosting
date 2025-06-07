@@ -5,7 +5,7 @@ import { UITable } from '@/ui';
 </script>
 
 <template>
-  <UITable />
+  <span>Раздел в разработке</span>
 </template>
 
 <style lang='scss' module='$s'>
